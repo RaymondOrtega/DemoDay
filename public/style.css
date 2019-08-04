@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 10px;
+  margin: 0 0 0 0;
+}
+
+header {
+  grid-template-columns: 50% 50%;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  float: left;
+  background-size: cover;
+  background-image: url(/img/book1.png);
+  background-position: 0px 70%;
+  width: 100%;
+  height: 600px;
+}
+
+h1 {
+  margin: 0px 0 0 3%;
+  color: white;
+  font-size: 4rem;
+  height: 100px;
+}
+
+h2 {
+  max-width: 70%;
+  margin: 0px 0 170px 3%;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  grid-column: 1/2;
+}
+
+.left {
+  display: grid;
+  height: 20px;
+  text-align: center;
+  grid-template-columns: 10% 10%;
+  grid-gap: 10%;
+  margin: 10px 0 0 0;
+}
+
+.right {
+  padding: 0 0 0 45%;
+  height: 20px;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.3rem;
+}
+
+.bodySignUp {
+  background-size: cover;
+  background-image: url(/img/books.jpg);
+}
+
+.nav {
+  margin: 0 0 0 0;
+  background-color: rgba(184, 7, 11);
+  float: left;
+  height: 40px;
+  width: 100%;
+  display: inline-block;
+}
+
+/* CLEARFIX TRICK */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.rightMainSec {
+  margin: 0 0 0 0;
+  background-color: rgba(71, 56, 52, 0.9);
+  float: left;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.book {
+  margin: 200px 0 0 36%;
+  background-image: url(/img/book.jpg);
+  background-size: cover;
+  height: 612px;
+  width: 29%;
+}
+
+.topStories {
+  padding: 0 0% 0 0%;
+  grid-auto-rows: minmax(100px, auto);
+  float: left;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-color: rgba(192, 192, 192, 0.1);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fdec6e;
+  text-shadow: 0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.topStoriesHead {
+  background-color: white;
+  align-items: center;
+  margin: 0 0 0 0;
+  float: left;
+  width: 100%;
+  height: 225px;
+  display: inline-block;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h3 {
+  padding: 5px 0 5px 0;
+  border-bottom: 2px solid black;
+  border-bottom-width: thick;
+  border-top: 2px solid black;
+  border-top-style: ridge;
+  border-color: rgba(255, 0, 0, 0.5);
+  grid-column: 2/3;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+h4 {
+  margin: 60px 0 30px 0;
+  font-weight: 200;
+  color: white;
+  font-size: 2rem;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.author {
+  float: left;
+  background-image: url(/img/jelani.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 35px 3% 0 4%;
+  display: inline-block;
+  border-radius: 50%;
+  height: 145px;
+  width: 27%;
+  background-color: white;
+}
+
+.author2 {
+  float: left;
+  background-image: url(/img/ray.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 35px 3% 0 4%;
+  display: inline-block;
+  border-radius: 50%;
+  height: 145px;
+  width: 27%;
+  background-color: white;
+}
+
+.author3 {
+  float: left;
+  background-image: url(/img/mo.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 35px 3% 0 4%;
+  display: inline-block;
+  border-radius: 50%;
+  height: 145px;
+  width: 27%;
+  background-color: white;
+}
+
+p {
+  margin: 0 0 0 5%;
+  max-width: 90%;
+  padding: 0 2%;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.body {
+  background-size: cover;
+  background-image: url(/img/raymond.png);
+  margin: 200px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.body>section {
+  border-radius: 50% 20% / 10% 40%;
+  background-color: white;
+  text-align: center;
+  grid-column: 2/3;
+}
+
+.body>section>h1 {
+  border-radius: 50% 0% / 80% 40%;
+  margin: 0 0 0 0;
+  background-color: rgb(180, 24, 24);
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.holdingForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 2/3;
+}
+
+form {
+  grid-column: 2/3;
+}
+
+input {
+  height: 30px;
+  width: 100%;
+}
+
+.container {
+  margin-top: 40px;
+  background-color: rgba(30, 30, 30, 0.7);
+}
+
+label {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.bodyLogIn {
+  background-size: cover;
+  background-image: url(/img/booklogin.jpg);
+}
+
+.signUpDir {
+  border-radius: 5%;
+  border: 1px solid white;
+  margin: 0% 5% 0 5%;
+  padding: 0 1% 0 1%;
+}
+
+.fa-book-open {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width:1000px) {
+  .rightMainSec {
+    grid-template-columns: 1fr;
+  }
+
+  .author {
+    border-color: rgba(255, 0, 0, 0.5);
+    border-top: 2px;
+    border-radius: 0%;
+    height: 300px;
+  }
+
+  .author2 {
+    border-color: rgba(255, 0, 0, 0.5);
+    border-top: 2px;
+    border-radius: 0%;
+    height: 300px;
+  }
+
+  .author3 {
+    border-color: rgba(255, 0, 0, 0.5);
+    border-top: 2px;
+    border-radius: 0%;
+    height: 300px;
+  }
+}
