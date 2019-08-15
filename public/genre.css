@@ -1,0 +1,328 @@
+.Horror {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  background-size: cover;
+}
+
+.containerH {
+  background-image: url(/img/horror.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgba(30, 30, 30, 0.5);
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerH>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.Horror>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Adventure {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  background-size: cover;
+  background-position: center;
+}
+.containerA {
+  background-image: url(/img/Adventure.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerA>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Adventure>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Comedy {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  background-size: cover;
+}
+.containerC {
+  background-image: url(/img/Comedy.jpeg);
+  background-size: cover;
+  background-position: top;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerC>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Comedy>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Fan-Fiction {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  background-size: cover;
+}
+.containerF {
+  background-image: url(/img/Fan-Fiction.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerF>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Fan-Fiction>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Mystery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  background-size: cover;
+}
+.containerM {
+  background-image: url(/img/Mystery.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerM>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Mystery>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Romantic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  background-size: cover;
+}
+.containerR {
+  background-image: url(/img/romance.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerR>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Romantic>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.Si-Fi {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  background-size: cover;
+  background-position: center;
+}
+.Si-Fi>a {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.containerS {
+  background-image: url(/img/Si-Fi.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  grid-column: 1/6;
+  grid-row: 1/3;
+  height: 600px;
+}
+.containerS>section {
+  background-color: rgba(2,21,37);
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  height: 50px;
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.list {
+  text-align: center;
+  background-color: rgba(2,21,37);
+  grid-column: 1/4;
+  height: 40px;
+  grid-row: 3/4;
+}
+
+.fa-book-open:before {
+  margin: 0 0 0 50px;
+  font-size: 2.5rem;
+}
+
+h1 {
+  height: 50px;
+  color: white;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: 1.7rem;
+  margin: 10px 0 0 0;
+}
+
+.storyBoard {
+  margin: 20px 0 0 0;
+  overflow-y: scroll;
+  background-color: rgba(2,21,37);
+  color: white;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  border-radius: 10px;
+}
+
+section {
+  color: white;
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+
+.storypost {
+  margin: 0 0 0 5%;
+  list-style: none;
+  font-size: 1.8rem;
+  word-spacing: normal;
+}
+
+a {
+  margin: 0 0 0 0;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e71d36;
+  text-shadow: 0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.cata {
+  margin: 5px 0 0 0;
+}
+
+.cata>a>li {
+  word-spacing: normal;
+  margin: 0px 0 0 0;
+  display: inline-block;
+}
+
+ul {
+  word-spacing: 4rem;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding: 0 0 0 0%;
+}
+
+.Title {
+  padding: 5px 0 5px 0;
+  border-bottom: 2px solid black;
+  border-bottom-width: thick;
+  border-top: 2px solid black;
+  border-top-style: ridge;
+  border-color: rgba(255, 0, 0, 0.5);
+  grid-column: 2/3;
+  text-align: center;
+  font-weight: 300;
+  color: black;
+  font-size: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.genre {
+  margin: 0 0 0 50%;
+}
+
+p {
+  margin: 10px 0 10px 0;
+  width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+li {
+  margin: 5px 0 0 0;
+  list-style: none;
+}

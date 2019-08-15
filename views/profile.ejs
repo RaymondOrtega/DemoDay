@@ -2,30 +2,35 @@
 <html>
 
 <head>
-  <title>World Of Books PROFILE</title>
+  <title>World Of Books</title>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="profile.css">
 </head>
 
 <body>
   <section class="topOfProfile">
-    <a href="/"> <i class="fas fa-book-open"></i></a>
-    <!-- search -->
-    <form class="" action="index.html" method="post">
-      <input type="text" name="" value="" placeholder="Search For Stories">
-    </form>
-    <a href="/creation">
-      <h1>Create</h1>
-    </a>
+    <section class="header">
+      <a href="/"><i class="fas fa-book-open"></i></a>
+      <!-- search -->
+      <a href="/creation" class="Create">
+        <h2>Create</h2>
+      </a>
+    </section>
+    <section class="profilePic"></section>
   </section>
+
 
   <section class="leftBio">
 
-    <section class="profilePic"></section>
+
     <h4>My Bio:</h4>
 
 
@@ -34,25 +39,34 @@
   </section>
   <section class="jumboTron">
     <h3>My Book Shelf</h3>
-    <% for(var i=0; i<stories.length; i++) {%>
-    <ul>
-      <li class="story">
-        <span><%= user.local.email %></span>
-        <p><%= stories[i].name %></p>
-        <p><%=stories[i].summary%></p>
-        <p><%= stories[i].stories %></p>
-        <p><%= stories[i].thumbUp %></p>
-        <p><%= stories[i].thumbDown %></p>
-        <button class="fa fa-trash" type="button" name="button" aria-hidden="true"></button>
-      </li>
+    <section class="bookShelf">
+      <% for(var i=0; i<stories.length; i++) {%>
+      <ul>
+        <section class="books">
+          <li class="story">
+            <span><%= user.local.username %></span>
+            <p><%= stories[i].name %></p>
+            <p><%=stories[i].summary%></p>
+            <p class="width"><%= stories[i].stories %></p>
+            <p class="hide"><%= stories[i].thumbUp %></p>
+            <p class="hide"><%= stories[i].thumbDown %></p>
+            <p><%= Math.floor(stories[i].thumbUp / stories[i].thumbDown*100) %>%</p>
+            <button class="fa fa-trash" type="button" name="button" aria-hidden="true"></button>
+            <button class="postStory" type="button">Post Story</button>
+            <a href="/edit/<%= stories[i]._id %>">
+              <h3>Edit</h3>
+            </a>
+              <%if(stories[i].postStory==true){%>
+            <span class="posted">Posted</span>
+            <%}%>
+          </li>
+        </section>
 
-      <% } %>
-    </ul>
-    <ul>
-      <li>stories[i].name</li>
-    </ul>
+        <% } %>
+      </ul>
+    </section>
   </section>
-
 </body>
 <script src="main.js"></script>
+
 </html>

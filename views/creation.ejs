@@ -6,25 +6,94 @@
   <link rel="stylesheet" href="create.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Main Quill library -->
+  <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+  <!-- Theme included stylesheets -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+  <!-- Include the Quill library -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Core build with no theme, formatting, non-essential modules -->
+  <link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.1.9/quill.js"></script>
+  <title>World Of Books</title>
 </head>
 
+
 <body>
-  <a href="/" class="goHome">
-    <i class="fas fa-book-open"></i>
-  </a>
-  <a href="/profile" class="back">
-    <h3>Back</h3>
-  </a>
-  <section>
+  <section class="container">
+    <section>
+      <a href="/" class="goHome">
+        <i class="fas fa-book-open"></i>
+      </a>
+      <a href="/profile" class="back">
+        <h3>Back</h3>
+      </a>
+    </section>
+  </section>
+  <h5>Create</h5>
+  <section class="bookWrite">
     <% if (user.local.email) { %>
     <form action="/stories" method="POST">
-      <input type="text" value="<%= user.local.email %>" name="name">
-      <input type="text" placeholder="" name="stories" class="storyInput">
-      <button type="submit">Submit</button>
+      <input type="text" value="<%= user.local.username %>" name="user">
+      <span>Title :</span>
+      <input class="title" type="text" name="title" value="" placeholder="Title">
+      <input class="storyInput" type="text" name="stories">
+      <!-- Initialize Quill editor -->
+      <span>Genre :</span>
+      <select name="genre" name="genre">
+        <option value=""></option>
+        <option value="Horror">Horror</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Si-Fi">Si-Fi</option>
+        <option value="Romantic">Romantic</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Fan-Fiction">Fan-Fiction</option>
+      </select>
+      <button type="submit">Save To Profile</button>
+
     </form>
-  </section>
-  <% } %>
+
+
+    <!-- Create the editor container -->
+    <div id="editor">
+      <input name="about" type="hidden">
+      <p></p>
+      <p><br></p>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+
+      </div>
+      <div class="col-xs-8">
+      </div>
+    </div>
+    <div class="row form-group">
+      <input name="about" type="hidden">
+      <div id="editor-container">
+        <p></p>
+      </div>
+    </div>
+
+
 </body>
+<script type="text/javascript" src="main.js">
+
+</script>
+</section>
+<% } %>
+
+
 
 </html>

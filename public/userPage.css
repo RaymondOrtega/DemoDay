@@ -1,0 +1,220 @@
+
+
+span {
+  margin: 0 0 0 5%;
+  color: black;
+}
+
+.topOfProfile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 425px;
+  background-image: url(/img/blue.jpeg);
+  background-size: cover;
+  background-color: red;
+  background-position: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/5;
+  background-color: rgba(2,21,37);
+  height: 50px;
+  width: 100%;
+}
+
+.leftBio {
+  display: grid;
+  grid-row: 3/2;
+  grid-template-rows: 2fr 3fr 1fr 1fr;
+  float: left;
+  width: 20%;
+  background-image: url(/img/);
+  background-position: top;
+  background-color: rgba(2,21,37);
+  border-radius: 10px;
+  margin: 253px 0 0 6%;
+}
+button{
+  border-radius: 10px;
+  border: white;
+  background-color: white;
+  color: red;
+
+}
+.profilePic {
+  background-size: cover;
+  background-image: url(/img/ray.jpg);
+  margin: 215px 0 0 17%;
+  border-radius: 50%;
+  width: 32%;
+  height: 280px;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+h1 {
+  color: rgb(255,255,242);
+  font-size: 3rem;
+  margin: 40px 0 0 5%;
+}
+h3 {
+  color: black;
+  border-bottom: 2px solid black;
+  border-bottom-width: thick;
+  border-top: 2px solid black;
+  border-top-style: ridge;
+  border-color: rgba(255, 0, 0, 0.5);
+  padding: 5px 0 5px 0;
+  margin: 160px 0 20px 19%;
+  max-width: 30%;
+  grid-row: 1/2;
+  height: 50px;
+  font-size: 3rem;
+}
+h4{
+  margin:20px 0 0 5%;
+  color:  rgb(255,255,242);
+}
+input {
+  border-radius: 10%;
+  width: 70%;
+  height: 40px;
+  margin: 40px 0 0 5%;
+  grid-column: 2/3;
+}
+
+form {
+  grid-column: 2/3;
+}
+
+
+
+.jumboTron {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 30px;
+}
+
+.jumboTron>ul {
+  grid-row: 2/3;
+}
+
+.bookShelf {
+  grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  max-width: 50%;
+  margin: 0 0 0 5%;
+  border-radius: 10px;
+}
+
+li {
+  color: rgb(255,255,242);
+  max-width: 100%;
+  font-size: 2rem;
+  display: inline-block;
+  margin: 20px 0 0 5%
+}
+
+ul {
+  padding: 0 0 0 5%;
+  padding: 0 0 0 0;
+}
+
+a:hover {
+  color: #e71d36;
+  text-shadow: 0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+span{
+  color: rgb(255,255,242);
+}
+p {
+  color: rgb(255,255,242);
+  padding: 0 0 0 5%;
+  font-size: 2.3rem;
+}
+
+a {
+  margin: 0 0 0 0;
+  color: rgb(255,255,242);
+}
+
+.Create {
+  grid-column: 3/4;
+}
+
+.Create>h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 10px 0 0 50%;
+}
+
+.width {
+  color: rgb(255,255,242);
+  max-width: 100%;
+}
+
+i {
+  margin: 40px 0 0 35%;
+  font-size: 4rem;
+}
+
+.fa-trash {
+  margin: 0 0 0 0%;
+  color: black;
+}
+
+.books {
+  border-radius: 10px;
+  background-color: rgba(2,21,37);
+  margin: 20px 0 0 0;
+}
+
+.fa-book-open:before {
+  margin: 0 0 20px 0;
+  grid-column: 1/2;
+}
+
+.fa-book-open:before>a {
+  grid-column: 3/4;
+  font-weight: 500;
+  font-size: 3.4rem;
+  margin: 0px 0 0 24%;
+}
+.fa-trash:before {
+    border-radius: 10px;
+}
+.fa, .fas {
+  font-size: 2.9rem;
+  margin: 5px 0 15px 5%;
+  padding: 5px;
+}
+.posted{
+  font-style: italic;
+  text-decoration: inherit;
+  color: red;
+  margin: 0 0 0 10%;
+}
+.postStory{
+  margin: 0 0 0 10%;
+}
+.postStory+a>h3{
+  display: inline-block;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 2rem;
+  height:40px;
+  width: 10%;
+  padding: 7px 0 0 1.33%;
+  margin: 0 0 0 15%;
+}
+.message>p{
+  color: black;
+}

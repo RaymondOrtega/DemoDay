@@ -2,40 +2,31 @@
 
 // set up ======================================================================
 // get all the tools we need
-var express  = require('express');
-var app      = express();
-var port     = process.env.PORT || 8080;
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8080;
 const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
-var flash    = require('connect-flash');
-
-var morgan       = require('morgan');
+var flash = require('connect-flash');
+var ObjectId = require('mongodb').ObjectID
+var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
-var session      = require('express-session');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var configDB = require('./config/database.js');
-
 var db
 
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(configDB.url, { useNewUrlParser: true }, (err, database) => {
   if (err) return console.log(err)
   db = database
-  require('./app/routes.js')(app, passport, db);
+  require('./app/routes.js')(app, passport, db, ObjectId);
+  // , multer
 }); // connect to our database
 
-// app.listen(port, () => {
-//     MongoClient.connect(configDB.url, { useNewUrlParser: true }, (error, client) => {
-//         if(error) {
-//             throw error;
-//         }
-//         db = client.db(configDB.dbName);
-//         console.log("Connected to `" + configDB.dbName + "`!");
-//         require('./app/routes.js')(app, passport, db);
-//     });
-// });
+
 
 require('./config/passport')(passport); // pass passport for configuration
 
@@ -50,9 +41,9 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 
 // required for passport
 app.use(session({
-    secret: 'rcbootcamp2019a', // session secret
-    resave: true,
-    saveUninitialized: true
+  secret: 'rcbootcamp2019a', // session secret
+  resave: true,
+  saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions

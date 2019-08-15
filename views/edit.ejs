@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/edit.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <title>World Of Books</title>
+</head>
+
+<body>
+  <section class="container">
+    <section>
+      <a href="/" class="goHome">
+        <i class="fas fa-book-open"></i>
+      </a>
+      <a href="/profile" class="back">
+        <h3>Back</h3>
+      </a>
+    </section>
+  </section>
+  <h5>Edit Story</h5>
+  <section class="bookWrite">
+
+    <% if (user.local.email) { %>
+
+      <p>user:</p>
+      <input type="text" value="<%= user.local.username %>" name="user">
+      <span>Title :</span>
+      <textarea name="name" rows="8" cols="80"><%= story.title %></textarea>
+      <textarea name="name" rows="8" cols="80"><%= story.stories %></textarea>
+      <span>Genre :</span>
+      <select name="genre" name="genre">
+        <option value=""></option>
+        <option value="Horror">Horror</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Si-Fi">Si-Fi</option>
+        <option value="Romantic">Romantic</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Fan-Fiction">Fan-Fiction</option>
+      </select>
+      <button class="update" type="button" name="button">Update</button>
+      <input class="weee" type="text" name="" value="<%= story.timeStamp %>">
+
+
+</body>
+<script type="text/javascript" src="/main.js">
+
+</script>
+</section>
+<% } %>
+
+
+
+</html>

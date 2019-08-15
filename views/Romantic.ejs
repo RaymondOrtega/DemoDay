@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="genre.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>World Of Books</title>
+</head>
+
+<body class="Romantic">
+
+
+  <section class="containerR">
+    <section>
+      <li><a href="/"><i class="fas fa-book-open"></i></a></li>
+      <h1>WELCOME TO THE WORLD OF BOOKS!</h1>
+    </section>
+  </section>
+  <section class="list">
+    <ul class="cata">
+      <a href="/read">
+        <li>Home</li>
+      </a>
+      <a href="/Horror">
+        <li>Horror</li>
+      </a>
+
+      <a href="/Comedy">
+        <li>Comedy</li>
+      </a>
+
+      <a href="/Si-Fi">
+        <li>Si-Fi</li>
+      </a>
+
+      <a href="/Romantic">
+        <li>Romantic</li>
+      </a>
+
+      <a href="/Adventure">
+        <li>Adventure</li>
+      </a>
+
+      <a href="/Mystery">
+        <li>Mystery</li>
+      </a>
+
+      <a href="/Fan-Fiction">
+        <li>Fan-Fiction</li>
+      </a>
+    </ul>
+  </section>
+  <section>
+    <h3 class="Title">Romance</h3>
+    <% for(var i=0; i<stories.length; i++) {%>
+      <%if(stories[i].postStory==true){%>
+    <%if(stories[i].genre==="Romantic"){%>
+    <ul>
+      <section>
+        <section class="storyBoard">
+          <li class="storypost">
+            <a href="/readStories/<%= stories[i]._id %>">
+              <span><%= stories[i].username %></span>
+              <p><%=stories[i].title%></p>
+              <p><%= stories[i].name %></p>
+              <p><%=stories[i].summary%></p>
+              <p><%= stories[i].stories %></p>
+            </a>
+            <p class="hide"><%= stories[i].thumbUp%></p>
+            <p class="hide"><%= stories[i].thumbDown%></p>
+            <p><%= Math.floor(stories[i].thumbUp / stories[i].thumbDown*100)%>%</p>
+            <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+            <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+            <span class="genre"><%= stories[i].genre%></span>
+          </li>
+        </section>
+      </section>
+      <% } %>
+      <%}%>
+      <%}%>
+    </ul>
+
+
+  </section>
+</body>
+<script src="main.js"></script>
+
+</html>

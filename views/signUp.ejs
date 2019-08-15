@@ -4,6 +4,11 @@
     <title>World Of Books</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bodySignUp">
@@ -14,6 +19,10 @@
 
     <!-- LOGIN FORM -->
     <form action="/signup" method="post">
+      <div class="form-group">
+            <label>User Name:</label>
+            <input type="text" class="form-control" name="userName">
+        </div>
         <div class="form-group">
             <label>Email</label>
             <input type="text" class="form-control" name="email">
@@ -22,7 +31,6 @@
             <label>Password</label>
             <input type="password" class="form-control" name="password">
         </div>
-
         <button type="submit" class="btn btn-warning btn-lg">Signup</button>
     </form>
 

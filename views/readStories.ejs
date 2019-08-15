@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>World of books</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-32x32.png">
+  <link rel="stylesheet" href="/readStories.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <section>
+      <a href="/read">Back</a>
+    </section>
+  </section>
+  <% for(var i=0; i<stories.length; i++) {%>
+  <a href='/userPage/<%=stories[i].username%>'>
+    <h4>More Stories By: <%= stories[i].username %></h4>
+  </a>
+  <% } %>
+  <% for(var i=0; i<stories.length; i++) {%>
+  <h3><%= stories[i].title %></h3>
+  <% } %>
+  <section class="story">
+    <ul>
+      <% for(var i=0; i<stories.length; i++) {%>
+      <li class="message">
+        <p>By: <%= stories[i].username %></p>
+        <p><%= stories[i].stories %></p>
+        <span><%= stories[i].timeStamp%></span>
+      </li>
+      <% } %>
+    </ul>
+  </section>
+
+  <script src="/main.js"></script>
+
+</body>
+
+</html>
