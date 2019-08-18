@@ -397,7 +397,7 @@ app.post('/postFromFeed', (req, res) => {
   // SIGNUP =================================
   // show the signup form
   app.get('/signup', function(req, res) {
-    res.render('signup.ejs', {
+    res.render('signUp.ejs', {
       message: req.flash('signupMessage')
     });
   });
