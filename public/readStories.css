@@ -91,7 +91,7 @@ p {
   grid-row: 4/5;
   grid-column: 2/3;
   height: 40px;
-  max-width: 50%;
+  max-width: 65%;
   border-radius: 10px;
   border-color: rgba(2, 21, 37);
   border: 2px solid;
