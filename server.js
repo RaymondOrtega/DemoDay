@@ -2,6 +2,9 @@
 
 // set up ======================================================================
 // get all the tools we need
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8080;
@@ -9,7 +12,6 @@ const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash = require('connect-flash');
-// require('dotenv').load();
 var ObjectId = require('mongodb').ObjectID
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
