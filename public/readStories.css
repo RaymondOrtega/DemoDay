@@ -3,21 +3,28 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 
 a {
   grid-row: 1/2;
   grid-column: 1/2;
   color: white;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 400;
-  margin: 0px 0 0 5%;
+  margin: 0 0 0px 10%;
+}
+
+.back {
+  margin: 10px 0 0 60%;
+  grid-column: 3/4;
 }
 
 a:hover {
   text-decoration: none;
-  color: #e71d36;
-  text-shadow: 0px 0px 30px #fdec6e;
+  color: white;
+  text-shadow: 0px 0px 30px red;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
@@ -92,6 +99,8 @@ p {
 }
 
 .container>section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-row: 1/2;
   grid-column: 1/4;
   height: 60px;
@@ -105,6 +114,12 @@ p {
   background-color: rgba(2, 21, 37);
   grid-row: 3/4;
   grid-column: 2/3;
+}
+
+.fa, .fas {
+  grid-column: 1/2;
+  font-weight: 900;
+  margin: 20px 0 0 0;
 }
 
 .story>a {

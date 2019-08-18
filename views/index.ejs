@@ -16,16 +16,17 @@
 <body>
 
   <header>
-    <ul class="left">
-      <li><a href="/"><i class="fas fa-book-open"></i></a></li>
-      <li><a href="/read">Read</a></li>
-    </ul>
-    <ul class="right">
-      <li><a href="/login">Log-In</a></li>
-      <li class="signUpDir"><a href="/signUp">Sign-Up</a></li>
-      <li> <a href="/profile">Profile</a> </li>
-    </ul>
-
+    <section>
+      <ul class="left">
+        <li><a href="/"><i class="fas fa-book-open"></i></a></li>
+        <li><a href="/read">Read</a></li>
+      </ul>
+      <ul class="right">
+        <li><a href="/login">Log-In</a></li>
+        <li class="signUpDir"><a href="/signUp">Sign-Up</a></li>
+        <li> <a href="/profile">Profile</a> </li>
+      </ul>
+    </section>
     <h1>World of Books</h1>
     <h2>In A World Full of Stories To Be Told, Tell Yours.</h2>
 
@@ -35,30 +36,51 @@
   </section>
   <section class="rightMainSec clearfix">
     <section class="topStories clearfix">
+
+      <%if(stories.length>2){%>
+
+
+      <% for(var i=stories.length-1; i<stories.length; i++) {%>
+        <%if(stories[i].postStory==true){%>
       <section class="author"></section>
+      <a href="/readStories/<%= stories[0]._id %>">
+        <h4><%= stories[i-0].title %></h4>
 
-      <h4>Title: "Stay Gold"</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p><%= stories[i-0].stories %></p>
+          <%}%>
+        <%}%>
+      <a/>
     </section>
 
-    <section class="topStories clearfix">
+    <section class="topStories1 clearfix">
 
-      <section class="author2"></section>
-      <h4>Title: "Red Seas"</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+      <% for(var i=stories.length-1; i<stories.length; i++) {%>
+        <%if(stories[i].postStory==true){%>
+        <section class="author2"></section>
+        <a href="/readStories/<%= stories[i-1]._id %>">
+          <h4><%= stories[i-1].title %></h4>
+
+          <p><%= stories[i-1].stories %></p>
+            <%}%>
+          <%}%>
+    </a>
     </section>
 
-    <section class="topStories clearfix">
+    <section class="topStories2 clearfix">
 
-      <section class="author3"></section>
-      <h4>Title: "Costellation-Zone"</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <% for(var i=stories.length-1; i<stories.length; i++) {%>
+        <%if(stories[i].postStory==true){%>
+          <section class="author3"></section>
+          <a href="/readStories/<%= stories[i-2]._id %>">
+            <h4><%= stories[i-2].title %></h4>
+
+            <p><%= stories[i-2].stories %></p>
+            <a />
+              <%}%>
+            <%}%>
+      <%}%>
     </section>
 
   </section>

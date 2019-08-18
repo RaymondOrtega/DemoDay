@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 
 .container {
@@ -20,7 +22,7 @@
 }
 
 .container>section {
-  background-color: rgba(2,21,37);
+  background-color: rgba(2, 21, 37);
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   height: 50px;
@@ -36,15 +38,15 @@
 
 .list {
   text-align: center;
-  background-color: rgba(2,21,37);
+  background-color: rgba(2, 21, 37);
   grid-column: 1/4;
   height: 40px;
   grid-row: 3/4;
 }
 
 .fa-book-open:before {
-  margin: 0 0 0 50px;
-  font-size: 2.5rem;
+  margin: 20px 0 0 50px;
+  font-size: 2rem;
 }
 
 h1 {
@@ -59,11 +61,11 @@ h1 {
 .storyBoard {
   margin: 20px 0 0 0;
   overflow-y: scroll;
-  background-color: rgba(2,21,37);
+  background-color: rgba(2, 21, 37);
   color: white;
   grid-column: 2/3;
   grid-row: 5/6;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 section {
@@ -87,8 +89,8 @@ a {
 }
 
 a:hover {
-  color: #e71d36;
-  text-shadow: 0px 0px 30px #fdec6e;
+  color: white;
+  text-shadow: 0px 0px 30px red;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
@@ -130,9 +132,14 @@ ul {
   display: none;
 }
 
+.hide+p {
+  font-family: sans-serif;
+}
+
 .genre {
   margin: 0 0 0 50%;
 }
+
 p {
   width: 350px;
   white-space: nowrap;
@@ -141,6 +148,6 @@ p {
 }
 
 li {
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   list-style: none;
 }

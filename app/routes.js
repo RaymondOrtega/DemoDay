@@ -1,12 +1,17 @@
-module.exports = function(app, passport, db, ObjectId) {
+module.exports = function(app, passport, db, ObjectId, multer) {
 
   // normal routes ===============================================================
 
   // show the home page (will also have our login links)
-  app.get('/', function(req, res) {
-    res.render('index.ejs');
-  });
 
+  app.get('/', function(req, res) {
+    db.collection('stories').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('index.ejs', {
+        stories: result,
+      })
+    })
+  });
   // PROFILE SECTION =========================
   app.get('/profile', isLoggedIn, function(req, res) {
     var uId = ObjectId(req.session.passport.user)
@@ -20,6 +25,7 @@ module.exports = function(app, passport, db, ObjectId) {
         "username": uName
       }).toArray((err, result) => {
         if (err) return console.log(err)
+        console.log(req.user);
         res.render('profile.ejs', {
           user: req.user,
           stories: result
@@ -27,22 +33,96 @@ module.exports = function(app, passport, db, ObjectId) {
       })
     });
   })
-  //PROFILE PICTURE =============================================
-  // app.post('/posts', upload.single('file-to-upload'), (req, res) => {
-  //       var uId = ObjectId(req.session.passport.user)
-  //       var uName
-  //       //insertDocuments(db, req, 'images/uploads/' + req.file.filename, () => {});
-  //       db.collection('users').find({"_id": uId}).toArray((err, result) => {
-  //         if (err) return console.log(err)
-  //         uName = result[0].local.username
-  //         db.collection('stories').save({username: uName, postText: req.body.postText, postImg: 'images/uploads/' + req.file.filename}, (err, result) => {
-  //           if (err) return console.log(err)
-  //           console.log('saved to database')
-  //           res.redirect('/profile')
-  //         })
-  //       })
+  // //---------------------------------------
+  // // comments
+  // //---------------------------------------
+  app.put('/updateComment', (req, res) => {
+  db.collection('feed')
+    .findOneAndUpdate({
+      userPosted: req.body.userPosted,
+      feedMsg: req.body.feedMsg,
+      feedDate: req.body.feedDate
+    }, {
+      $addToSet: {
+        comments: [req.body.currentUser, req.body.comment]
+      }
+    }, {
+      sort: {
+        _id: -1
+      },
+      upsert: true
+    }, (err, result) => {
+      if (err) return res.send(err)
+      res.send(result)
+    })
+})
+app.post('/postFromFeed', (req, res) => {
+  var uId = ObjectId(req.session.passport.user)
+  var uName
+  var proPic
+  db.collection('users').find({
+    "_id": uId
+  }).toArray((err, result) => {
+    if (err) return console.log(err)
+    uName = result[0].local.username
+    proPic = result[0].local.imageUrl
+    db.collection('feed').save({
+      userPostedId: uId,
+      userPosted: uName,
+      userProPic: proPic,
+      feedMsg: req.body.feedMsg,
+      feedDate: date + ' ' + time,
+      favoritedBy: [],
+      comments: []
+    }, (err, result) => {
+      if (err) return console.log(err)
+      console.log('saved to database')
+      res.redirect('/feed')
+    })
+  })
+})
+  // //---------------------------------------
+  // // IMAGE CODE
+  // //---------------------------------------
+  // var storage = multer.diskStorage({
+  //     destination: (req, file, cb) => {
+  //       cb(null, 'public/img/uploads')
+  //     },
+  //     filename: (req, file, cb) => {
+  //       cb(null, file.fieldname + '-' + Date.now() + ".png")
+  //     }
+  // });
+  // var upload = multer({storage: storage});
   //
+  // app.post('/up', upload.single('file-to-upload'), (req, res, next) => {
+  //
+  //     insertDocuments(db, req, '../public/img/uploads/' + req.file.filename, () => {
+  //         //db.close();
+  //         //res.json({'message': 'File uploaded successfully'});
+  //         res.redirect('/profile')
+  //     });
+  // });
+  //
+  // var insertDocuments = function(db, req, filePath, callback) {
+  //     var collection = db.collection('users');
+  //     var uId = ObjectId(req.session.passport.user)
+  //     collection.findOneAndUpdate({"_id": uId}, {
+  //       $set: {
+  //         profileImg: filePath
+  //       }
+  //     }, {
+  //       sort: {_id: -1},
+  //       upsert: false
+  //     }, (err, result) => {
+  //       if (err) return res.send(err)
+  //       callback(result)
   //     })
+  //     // collection.findOne({"_id": uId}, (err, result) => {
+  //     //     //{'imagePath' : filePath }
+  //     //     //assert.equal(err, null);
+  //     //     callback(result);
+  //     // });
+  // }
   //USER PROFILE =============================================
 
   app.get('/userPage/:username', isLoggedIn, function(req, res) {

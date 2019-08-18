@@ -12,7 +12,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="/profile.css">
 </head>
 
 <body>
@@ -46,6 +46,7 @@
           <li class="story">
             <span><%= user.local.username %></span>
             <p><%= stories[i].name %></p>
+            <p><%= stories[i].title %></p>
             <p><%=stories[i].summary%></p>
             <p class="width"><%= stories[i].stories %></p>
             <p class="hide"><%= stories[i].thumbUp %></p>
@@ -65,8 +66,15 @@
         <% } %>
       </ul>
     </section>
+
+    <!-- <h3><img src="../public/img/uploads/file-to-upload-1565914177876.png" alt=""></h3> -->
+    <!-- IMAGE UPLOAD -->
+<!-- <form action="/up" enctype="multipart/form-data" method="post">
+   <input type="file" name="file-to-upload">
+   <input type="submit" value="Upload">
+ </form> -->
   </section>
 </body>
-<script src="main.js"></script>
+<script src="/main.js"></script>
 
 </html>

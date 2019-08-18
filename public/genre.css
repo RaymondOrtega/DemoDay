@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 
 .containerH {
@@ -37,6 +39,8 @@
   grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
   background-position: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 .containerA {
   background-image: url(/img/Adventure.jpg);
@@ -65,8 +69,11 @@
 .Comedy {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
+  background-position: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 .containerC {
   background-image: url(/img/Comedy.jpeg);
@@ -95,8 +102,11 @@
 .Fan-Fiction {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
+  background-position: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 .containerF {
   background-image: url(/img/Fan-Fiction.jpeg);
@@ -125,8 +135,11 @@
 .Mystery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
+  background-position: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 .containerM {
   background-image: url(/img/Mystery.jpg);
@@ -155,8 +168,11 @@
 .Romantic {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
+  background-position: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 .containerR {
   background-image: url(/img/romance.jpeg);
@@ -186,9 +202,11 @@
 .Si-Fi {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
   background-size: cover;
   background-position: center;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0 0;
 }
 .Si-Fi>a {
   grid-column: 1/2;
@@ -224,7 +242,7 @@
 
 .fa-book-open:before {
   margin: 0 0 0 50px;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h1 {
@@ -267,13 +285,14 @@ a {
 }
 
 a:hover {
-  color: #e71d36;
-  text-shadow: 0px 0px 30px #fdec6e;
+  color: white;
+  text-shadow: 0px 0px 30px red;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+
 
 .cata {
   margin: 5px 0 0 0;
@@ -323,6 +342,6 @@ p {
 }
 
 li {
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   list-style: none;
 }

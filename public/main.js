@@ -7,7 +7,7 @@ var update = document.querySelectorAll(".update");
 Array.from(trash).forEach(function(element) {
   element.addEventListener('click', function() {
     const user = this.parentNode.childNodes[1].innerHTML
-    const stories = this.parentNode.childNodes[7].innerHTML
+    const stories = this.parentNode.childNodes[9].innerHTML
     console.log(stories);
     console.log(user);
     fetch('deleteStories', {
@@ -27,7 +27,7 @@ Array.from(trash).forEach(function(element) {
 Array.from(post).forEach(function(element) {
   element.addEventListener('click', function() {
     const user = this.parentNode.childNodes[1].innerHTML
-    const stories = this.parentNode.childNodes[7].innerHTML
+    const stories = this.parentNode.childNodes[9].innerHTML
     console.log(user);
     console.log(stories);
     // console.log(post);
@@ -131,3 +131,23 @@ Array.from(up).forEach(function(element) {
       })
   });
 });
+// fetch('updateComment', {
+//     method: 'put',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       'userPosted':userPosted,
+//       'feedMsg': feedMsg,
+//       'feedDate':feedDate,
+//       'currentUser': currentUser,
+//       'comment': comment
+//     })
+//   })
+//   .then(response => {
+//     console.log(response);
+//     if (response.ok) return response.json()
+//   })
+//   .then(data => {
+//     console.log(data)
+//   })

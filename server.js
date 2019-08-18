@@ -9,12 +9,13 @@ const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash = require('connect-flash');
+// require('dotenv').load();
 var ObjectId = require('mongodb').ObjectID
 var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-
+var multer = require('multer');
 var configDB = require('./config/database.js');
 var db
 
@@ -22,7 +23,7 @@ var db
 mongoose.connect(configDB.url, { useNewUrlParser: true }, (err, database) => {
   if (err) return console.log(err)
   db = database
-  require('./app/routes.js')(app, passport, db, ObjectId);
+  require('./app/routes.js')(app, passport, db, ObjectId, multer);
   // , multer
 }); // connect to our database
 
