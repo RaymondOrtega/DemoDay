@@ -41,7 +41,9 @@ img {
   border-radius: 5px;
   margin: 253px 0 0 6%;
 }
-
+.leftBio>section{
+  margin: 0 0 20px 0;
+}
 button {
   border-radius: 5px;
   border: white;
@@ -49,15 +51,11 @@ button {
   color: red;
 }
 
-.profilePic {
-  background-size: cover;
-  background-image: url(/img/ray.jpg);
-  margin: 215px 0 0 17%;
+.profilePic>img {
+  margin: 215px 0 0 138%;
   border-radius: 50%;
-  width: 32%;
-  height: 280px;
-  grid-row: 2/3;
-  grid-column: 2/3;
+  width: 74%;
+  height: 306px;
 }
 
 h1 {
@@ -79,7 +77,6 @@ h3 {
   grid-row: 1/2;
   height: 50px;
   font-size: 3rem;
-
 }
 
 h4 {
@@ -96,7 +93,7 @@ input {
 }
 
 form {
-  grid-column: 2/3;
+  grid-column: 1/2;
 }
 
 .jumboTron {
@@ -164,7 +161,7 @@ a {
 }
 
 .width {
-color: white;
+  color: white;
   max-width: 100%;
 }
 
@@ -197,12 +194,12 @@ i {
   margin: 0px 0 0 24%;
 }
 
-
 .fa-trash:before {
-  border-color:rgba(2, 21, 37);
+  border-color: rgba(2, 21, 37);
   border-radius: 5px;
-    content: "\f1f8";
+  content: "\f1f8";
 }
+
 .fa, .fas {
   font-size: 3.4rem;
   margin: 5px 0 15px 5%;
@@ -232,54 +229,38 @@ i {
 }
 
 @media only screen and (max-width:2014px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 28%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 }
 
 @media only screen and (max-width:1746px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 31%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 }
 
 @media only screen and (max-width:1614px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 34%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 }
 
 @media only screen and (max-width:1428px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 36%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 
   h3 {
@@ -299,41 +280,29 @@ i {
 }
 
 @media only screen and (max-width:1344px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 40%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 }
 
 @media only screen and (max-width:1211px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 43%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 }
 
 @media only screen and (max-width:1211px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 17%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 43%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 
   h3 {
@@ -353,25 +322,18 @@ i {
 }
 
 @media only screen and (max-width: 1085px) {
-  .profilePic {
-    background-size: cover;
-    background-image: url(/img/ray.jpg);
-    margin: 215px 0 0 14%;
+  .profilePic>img {
+    margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 48%;
-    height: 280px;
-    grid-row: 2/3;
-    grid-column: 2/3;
+    width: 74%;
+    height: 306px;
   }
 
   @media only screen and (max-width: 950px) {
-    .profilePic {
-      background-size: cover;
-      background-image: url(/img/ray.jpg);
-      margin: 215px 0 0 9%;
+    .profilePic>img {
+      margin: 215px 0 0 138%;
       border-radius: 50%;
-      width: 53%;
-      height: 280px;
-      grid-row: 2/3;
-      grid-column: 2/3;
+      width: 74%;
+      height: 306px;
     }
+  }

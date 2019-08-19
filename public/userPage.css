@@ -47,15 +47,12 @@ button{
   color: red;
 
 }
-.profilePic {
-  background-size: cover;
-  background-image: url(/img/ray.jpg);
-  margin: 215px 0 0 17%;
+
+.profilePic>img {
+  margin: 190px 0 0 138%;
   border-radius: 50%;
-  width: 32%;
-  height: 280px;
-  grid-row: 2/3;
-  grid-column: 2/3;
+  width: 74%;
+  height: 306px;
 }
 h1 {
   color: rgb(255,255,242);

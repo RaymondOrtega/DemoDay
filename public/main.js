@@ -3,6 +3,7 @@ var down = document.getElementsByClassName('fa-thumbs-down');
 var trash = document.querySelectorAll(".fa-trash");
 var post = document.getElementsByClassName("postStory");
 var update = document.querySelectorAll(".update");
+var commentSubmit = document.getElementsByClassName("commentSubmit");
 
 Array.from(trash).forEach(function(element) {
   element.addEventListener('click', function() {
@@ -131,23 +132,33 @@ Array.from(up).forEach(function(element) {
       })
   });
 });
-// fetch('updateComment', {
-//     method: 'put',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//       'userPosted':userPosted,
-//       'feedMsg': feedMsg,
-//       'feedDate':feedDate,
-//       'currentUser': currentUser,
-//       'comment': comment
-//     })
-//   })
-//   .then(response => {
-//     console.log(response);
-//     if (response.ok) return response.json()
-//   })
-//   .then(data => {
-//     console.log(data)
-//   })
+Array.from(commentSubmit).forEach(function(element) {
+  element.addEventListener('click', function() {
+    const currentUser = document.querySelector('.username').innerHTML
+    const comment = this.parentNode.parentNode.childNodes[1].value
+    const stories = this.parentNode.parentNode.parentNode.childNodes[1].childNodes[9].innerHTML
+    const username = this.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].innerHTML
+    console.log(stories);
+    console.log(username);
+    fetch('updateComment', {
+      method: 'put',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'username': username,
+        'stories':stories,
+        'currentUser': currentUser,
+        'comment': comment
+      })
+    })
+  .then(response => {
+    if (response.ok) return response.json()
+  })
+  .then(data => {
+    console.log(data)
+    window.location.reload(true)
+  })
+
+  });
+});

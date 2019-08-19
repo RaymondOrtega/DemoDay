@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
@@ -21,19 +20,21 @@ header {
   width: 100%;
   height: 600px;
 }
-header>section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column:1/3;
-    grid-row: 1/2;
-    background-color:rgba(2,21,37);
-    height: 50px;
+
+header>section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background-color: rgba(2, 21, 37);
+  height: 50px;
 }
+
 h1 {
   grid-row: 2/3;
   grid-column: 1/2;
   margin: 10px 0 0 3%;
-  color:white;
+  color: white;
   font-size: 4rem;
   height: 100px;
 }
@@ -46,10 +47,12 @@ h2 {
   font-weight: 600;
   grid-column: 1/2;
 }
+
 li {
   display: inline-block;
   font-size: 1.3rem;
 }
+
 p {
   margin: 0 0 0 5%;
   max-width: 90%;
@@ -58,6 +61,14 @@ p {
   font-size: 1.2rem;
   font-weight: 300;
 }
+
+p {
+  width: 350px;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 form {
   grid-column: 2/3;
 }
@@ -66,14 +77,16 @@ input {
   height: 30px;
   width: 100%;
 }
+
 a {
-  padding:3px 10px;
+  padding: 3px 10px;
   border-radius: 10px;
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.4rem;
 }
+
 h3 {
   padding: 5px 0 5px 0;
   border-bottom: 2px solid black;
@@ -94,6 +107,7 @@ h4 {
   font-size: 2rem;
   grid-auto-rows: minmax(100px, auto);
 }
+
 .left {
   display: grid;
   height: 20px;
@@ -111,18 +125,16 @@ h4 {
   text-align: center;
 }
 
-
-
 .bodySignUp {
   background-size: cover;
   background-image: url(/img/newbluepic.jpeg);
   background-position: center;
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .nav {
   margin: 0 0 0 0;
-  background-color: rgba(2,21,37);
+  background-color: rgba(2, 21, 37);
   float: left;
   height: 40px;
   width: 100%;
@@ -141,7 +153,7 @@ h4 {
 
 .rightMainSec {
   margin: 0 0 0 0;
-  background-color: rgba(2,21,37);
+  background-color: rgba(2, 21, 37);
   float: left;
   width: 100%;
   display: grid;
@@ -163,34 +175,32 @@ h4 {
   float: left;
   border-right: 2px solid white;
   border-left: 2px solid white;
-  border-color: rgba(2,21,37);
-grid-column: 1/2;
-grid-row: 1/2;
+  border-color: rgba(2, 21, 37);
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
+
 .topStories1 {
   padding: 0 0% 0 0%;
   grid-auto-rows: minmax(100px, auto);
   float: left;
   border-right: 2px solid white;
   border-left: 2px solid white;
-  border-color: rgba(2,21,37);
+  border-color: rgba(2, 21, 37);
   grid-column: 2/3;
   grid-row: 1/2;
-
 }
+
 .topStories2 {
   padding: 0 0% 0 0%;
   grid-auto-rows: minmax(100px, auto);
   float: left;
   border-right: 2px solid white;
   border-left: 2px solid white;
-  border-color: rgba(2,21,37);
+  border-color: rgba(2, 21, 37);
   grid-column: 3/4;
   grid-row: 1/2;
-
 }
-
-
 
 a:hover {
   color: white;
@@ -200,7 +210,6 @@ a:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-
 
 .topStoriesHead {
   background-color: white;
@@ -215,13 +224,8 @@ a:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-
 .author {
   float: left;
-  background-image: url(/img/jelani.jpg);
-  background-position: center;
-  background-size: cover;
   margin: 35px 3% 0 4%;
   display: inline-block;
   border-radius: 50%;
@@ -232,11 +236,20 @@ a:hover {
   grid-row: 1/2;
 }
 
+.author>img {
+  float: left;
+  margin: 0 0 0 0;
+  display: inline-block;
+  border-radius: 50%;
+  height: 145px;
+  width: 100%;
+  background-color: white;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
 .author2 {
   float: left;
-  background-image: url(/img/ray.jpg);
-  background-position: center;
-  background-size: cover;
   margin: 35px 3% 0 4%;
   display: inline-block;
   border-radius: 50%;
@@ -247,11 +260,20 @@ a:hover {
   grid-row: 2/3;
 }
 
+.author2>img {
+  float: left;
+  margin: 0 0 0 0;
+  display: inline-block;
+  border-radius: 50%;
+  height: 145px;
+  width: 100%;
+  background-color: white;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
 .author3 {
   float: left;
-  background-image: url(/img/mo.jpg);
-  background-position: center;
-  background-size: cover;
   margin: 35px 3% 0 4%;
   display: inline-block;
   border-radius: 50%;
@@ -260,7 +282,17 @@ a:hover {
   background-color: white;
 }
 
-
+.author3>img {
+  float: left;
+  margin: 0 0 0 0;
+  display: inline-block;
+  border-radius: 50%;
+  height: 145px;
+  width: 100%;
+  background-color: white;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
 
 .body {
   background-size: cover;
@@ -291,8 +323,6 @@ a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column: 2/3;
 }
-
-
 
 .container {
   margin-top: 40px;
@@ -339,7 +369,7 @@ label {
     border-color: rgba(255, 0, 0, 0.5);
     border-top: 2px;
     border-radius: 0%;
-    height:400px;
+    height: 400px;
   }
 
   .author3 {
@@ -348,44 +378,46 @@ label {
     border-radius: 0%;
     height: 400px;
   }
+
   .topStories {
     padding: 60px 0% 0 0%;
     grid-auto-rows: minmax(100px, auto);
     float: left;
     border-right: 2px solid white;
     border-left: 2px solid white;
-    border-color: rgba(2,21,37);
+    border-color: rgba(2, 21, 37);
     grid-column: 1/2;
     grid-row: 1/2;
-
   }
+
   .topStories1 {
     padding: 60px 0% 0 0%;
     grid-auto-rows: minmax(100px, auto);
     float: left;
     border-right: 2px solid white;
     border-left: 2px solid white;
-    border-color: rgba(2,21,37);
+    border-color: rgba(2, 21, 37);
     grid-column: 1/2;
     grid-row: 2/3;
-
   }
+
   .topStories2 {
     padding: 60px 0% 0 0%;
     grid-auto-rows: minmax(100px, auto);
     float: left;
     border-right: 2px solid white;
     border-left: 2px solid white;
-    border-color: rgba(2,21,37);
+    border-color: rgba(2, 21, 37);
     grid-column: 1/2;
     grid-row: 3/4;
-
   }
-  p{
+
+  p {
     font-size: 1.6rem;
     font-weight: 300;
   }
-  h4{
+
+  h4 {
     font-size: 2rem;
   }
 }
