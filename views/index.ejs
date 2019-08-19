@@ -32,7 +32,7 @@
 
   </header>
   <section class="topStoriesHead">
-    <h3>Top Stories Of The Month</h3>
+    <h3>Newest Stories Of The Day</h3>
   </section>
   <section class="rightMainSec clearfix">
     <section class="topStories clearfix">
@@ -40,45 +40,50 @@
       <%if(stories.length>2){%>
 
 
-      <% for(var i=stories.length-1; i<stories.length; i++) {%>
-        <%if(stories[i].postStory==true){%>
-      <section class="author"></section>
+      <% for(var i=0; i<stories.length; i++) {%>
+      <%if(stories[i].postStory==true){%>
+      <%if(stories[i]==stories[0]){%>
+      <section class="author"><img class="author" src="/<%= stories[0].profileImg%>" alt=""> </section>
       <a href="/readStories/<%= stories[0]._id %>">
         <h4><%= stories[i-0].title %></h4>
 
         <p><%= stories[i-0].stories %></p>
-          <%}%>
+        <%}%>
+        <%}%>
         <%}%>
       <a/>
     </section>
 
     <section class="topStories1 clearfix">
 
-
-
       <% for(var i=stories.length-1; i<stories.length; i++) {%>
+        <% var last = stories.length-1%>
         <%if(stories[i].postStory==true){%>
-        <section class="author2"></section>
-        <a href="/readStories/<%= stories[i-1]._id %>">
-          <h4><%= stories[i-1].title %></h4>
 
-          <p><%= stories[i-1].stories %></p>
-            <%}%>
+        <section class="author2"><img class="author2" src="/<%= stories[last].profileImg%>" alt=""> </section>
+        <a href="/readStories/<%= stories[last]._id %>">
+          <h4><%= stories[last].title %></h4>
+
+          <p><%= stories[last].stories %></p>
+
+          <%}%>
           <%}%>
     </a>
     </section>
 
     <section class="topStories2 clearfix">
 
-      <% for(var i=stories.length-1; i<stories.length; i++) {%>
-        <%if(stories[i].postStory==true){%>
-          <section class="author3"></section>
-          <a href="/readStories/<%= stories[i-2]._id %>">
-            <h4><%= stories[i-2].title %></h4>
+      <% for(var j=stories.length-1; j<stories.length; j++) {%>
+          <%if(stories[j].postStory==true){%>
 
-            <p><%= stories[i-2].stories %></p>
+          <section class="author3"><img class="author3" src="/<%= stories[last-1].profileImg%>" alt=""> </section>
+          <a href="/readStories/<%= stories[last-1]._id %>">
+            <h4><%= stories[last-1].title %></h4>
+
+            <p><%= stories[last-1].stories %></p>
             <a />
-              <%}%>
+
+            <%}%>
             <%}%>
       <%}%>
     </section>

@@ -78,14 +78,22 @@
             <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
             <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
             <span class="genre"><%= stories[i].genre%></span>
+            <form class="postComment">
+              <input type="text" name="comment" placeholder="Feedback">
+              <button type="button" name="commentSubmit"><i class="fas fa-comment-medical commentSubmit"></i></button>
+              <p class="textSent"></p>
+            </form>
+            <% for(var j=stories.length-1; j<stories.length; j++) {%>
+            <p class="comment">comments: <%= stories[j].comments.length%></p>
+            <%}%>
           </li>
         </section>
       </section>
       <%}%>
     </ul>
     <%}%>
-
   </section>
+  <span class="hide username"><%=user.local.username%></span>
 </body>
 <script src="/main.js"></script>
 

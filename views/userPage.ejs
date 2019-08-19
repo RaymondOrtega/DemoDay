@@ -22,7 +22,9 @@
       <!-- search -->
 
     </section>
-    <section class="profilePic"></section>
+    <% for(var j=stories.length-1; j<stories.length; j++) {%>
+    <section class="profilePic"><img src="/<%= stories[j].profileImg %>" alt=""></section>
+        <% } %>
   </section>
 
 

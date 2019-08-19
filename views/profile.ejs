@@ -24,18 +24,23 @@
         <h2>Create</h2>
       </a>
     </section>
-    <section class="profilePic"></section>
+    <section class="profilePic"><img src="/<%= user.local.profileImg %>" alt=""></section>
   </section>
-
-
   <section class="leftBio">
+    <section>
+      <p>Stories:</p>
+      <% for(var i=0; i<stories.length; i++) {%>
+      <p><%= stories[i].title %></p>
+      <span> Likes: <%= stories[i].thumbUp %></span>
+      <span>Dislikes: <%= stories[i].thumbDown -3%></span>
+      <%}%>
+    </section>
 
-
-    <h4>My Bio:</h4>
-
-
-    <li>list of favorite genres</li>
-    </ul>
+       <form action="/up" enctype="multipart/form-data" method="post">
+         <p>Edit:</p>
+          <input type="file" name="file-to-upload">
+          <input type="submit" value="Profile Picture">
+        </form>
   </section>
   <section class="jumboTron">
     <h3>My Book Shelf</h3>
@@ -57,7 +62,7 @@
             <a href="/edit/<%= stories[i]._id %>">
               <h3>Edit</h3>
             </a>
-              <%if(stories[i].postStory==true){%>
+            <%if(stories[i].postStory==true){%>
             <span class="posted">Posted</span>
             <%}%>
           </li>
@@ -67,12 +72,6 @@
       </ul>
     </section>
 
-    <!-- <h3><img src="../public/img/uploads/file-to-upload-1565914177876.png" alt=""></h3> -->
-    <!-- IMAGE UPLOAD -->
-<!-- <form action="/up" enctype="multipart/form-data" method="post">
-   <input type="file" name="file-to-upload">
-   <input type="submit" value="Upload">
- </form> -->
   </section>
 </body>
 <script src="/main.js"></script>
