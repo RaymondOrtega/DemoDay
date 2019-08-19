@@ -46,7 +46,7 @@
     <% if (user.local.email) { %>
     <form action="/stories" method="POST">
       <input  type="text" value="<%= user.local.username %>" name="user">
-      <input maxlength="12" class="title" type="text" name="title" value="" placeholder="Title">
+      <input maxlength="18" class="title" type="text" name="title" value="" placeholder="Title">
       <textarea class="storyInput" type="text" name="stories"rows="8" cols="80"></textarea>
       <!-- Initialize Quill editor -->
       <span>Genre :</span>
