@@ -354,7 +354,7 @@ label {
   font-size: 2rem;
 }
 
-@media only screen and (max-width:1500px) {
+@media only screen and (max-width:1300px) {
   .rightMainSec {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
