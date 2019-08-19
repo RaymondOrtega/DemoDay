@@ -29,13 +29,14 @@
 
 
   <section class="leftBio">
-
-
-    <h4>My Bio:</h4>
-
-
-    <li>list of favorite genres</li>
-    </ul>
+    <section>
+      <p>Stories:</p>
+      <% for(var i=0; i<stories.length; i++) {%>
+      <p><%= stories[i].title %></p>
+      <span> Likes: <%= stories[i].thumbUp %></span>
+      <span>Dislikes: <%= stories[i].thumbDown -3%></span>
+      <%}%>
+    </section>
   </section>
   <% for(var i=stories.length-1; i<stories.length; i++) {%>
   <section class="jumboTron">

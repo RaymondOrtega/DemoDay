@@ -22,6 +22,22 @@ img {
   background-position: center;
 }
 
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.cata>a {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.cata>a>li {
+  display: block;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -41,9 +57,11 @@ img {
   border-radius: 5px;
   margin: 253px 0 0 6%;
 }
-.leftBio>section{
+
+.leftBio>section {
   margin: 0 0 20px 0;
 }
+
 button {
   border-radius: 5px;
   border: white;
@@ -107,11 +125,12 @@ form {
 }
 
 .bookShelf {
-  grid-auto-rows: minmax(100px, auto);
-  display: grid;
-  max-width: 50%;
-  margin: 0 0 0 5%;
-  border-radius: 5px;
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 90%;
+    margin: 0 0 0 3%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
 }
 
 li {
@@ -125,7 +144,6 @@ li {
 }
 
 ul {
-  padding: 0 0 0 5%;
   padding: 0 0 0 0;
 }
 
@@ -281,27 +299,18 @@ i {
 
 @media only screen and (max-width:1344px) {
   .profilePic>img {
-    margin: 215px 0 0 138%;
+    margin: 215px 0 0 125%;
     border-radius: 50%;
-    width: 74%;
+    width: 95%;
     height: 306px;
   }
 }
 
 @media only screen and (max-width:1211px) {
   .profilePic>img {
-    margin: 215px 0 0 138%;
+    margin: 215px 0 0 122%;
     border-radius: 50%;
-    width: 74%;
-    height: 306px;
-  }
-}
-
-@media only screen and (max-width:1211px) {
-  .profilePic>img {
-    margin: 215px 0 0 138%;
-    border-radius: 50%;
-    width: 74%;
+    width: 110%;
     height: 306px;
   }
 
@@ -323,9 +332,9 @@ i {
 
 @media only screen and (max-width: 1085px) {
   .profilePic>img {
-    margin: 215px 0 0 138%;
+    margin: 215px 0 0 118%;
     border-radius: 50%;
-    width: 74%;
+    width: 120%;
     height: 306px;
   }
 
@@ -333,7 +342,25 @@ i {
     .profilePic>img {
       margin: 215px 0 0 138%;
       border-radius: 50%;
-      width: 74%;
+      width: 80%;
       height: 306px;
     }
+    .bookShelf {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 90%;
+    margin: 0 0 0 0%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+  }
+  }
+  @media only screen and (min-width: 769px) {
+    .bookShelf {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 90%;
+    margin: 0 0 0 0%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+  }
   }

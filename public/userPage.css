@@ -1,13 +1,16 @@
-
+body {
+  font-family: 'Playfair Display', serif;
+}
 
 span {
   margin: 0 0 0 5%;
-  color: black;
+  color: white;
 }
-body{
-  margin: 0 0 0 0;
-  font-family: 'Playfair Display', serif;
+
+img {
+  width: 100%;
 }
+
 .topOfProfile {
   display: grid;
   grid-template-columns: 2fr 4fr 1fr;
@@ -19,11 +22,27 @@ body{
   background-position: center;
 }
 
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.cata>a {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.cata>a>li {
+  display: block;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column: 1/5;
-  background-color: rgba(2,21,37);
+  background-color: rgba(2, 21, 37);
   height: 50px;
   width: 100%;
 }
@@ -34,49 +53,58 @@ body{
   grid-template-rows: 2fr 3fr 1fr 1fr;
   float: left;
   width: 20%;
-  background-image: url(/img/);
-  background-position: top;
-  background-color: rgba(2,21,37);
-  border-radius: 10px;
+  background-color: rgba(2, 21, 37);
+  border-radius: 5px;
   margin: 253px 0 0 6%;
 }
-button{
-  border-radius: 10px;
+
+.leftBio>section>p {
+  border-top: 4px solid;
+  border-color: rgba(12, 31, 47);
+  margin: 10px 0 20px 0;
+}
+
+
+button {
+  border-radius: 5px;
   border: white;
   background-color: white;
   color: red;
-
 }
 
 .profilePic>img {
-  margin: 190px 0 0 138%;
+  margin: 215px 0 0 138%;
   border-radius: 50%;
   width: 74%;
   height: 306px;
 }
+
 h1 {
-  color: rgb(255,255,242);
+  color: rgb(255, 255, 242);
   font-size: 3rem;
   margin: 40px 0 0 5%;
 }
+
 h3 {
-  color: black;
-  border-bottom: 2px solid black;
-  border-bottom-width: thick;
-  border-top: 2px solid black;
-  border-top-style: ridge;
-  border-color: rgba(255, 0, 0, 0.5);
-  padding: 5px 0 5px 0;
-  margin: 160px 0 20px 19%;
-  max-width: 30%;
-  grid-row: 1/2;
-  height: 50px;
-  font-size: 3rem;
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 160px 0 20px 15%;
+    max-width: 33%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
 }
-h4{
-  margin:20px 0 0 5%;
-  color:  rgb(255,255,242);
+
+h4 {
+  margin: 20px 0 0 5%;
+  color: rgb(255, 255, 242);
 }
+
 input {
   border-radius: 10%;
   width: 70%;
@@ -86,10 +114,8 @@ input {
 }
 
 form {
-  grid-column: 2/3;
+  grid-column: 1/2;
 }
-
-
 
 .jumboTron {
   display: grid;
@@ -102,23 +128,25 @@ form {
 }
 
 .bookShelf {
-  grid-auto-rows: minmax(100px, auto);
-  display: grid;
-  max-width: 50%;
-  margin: 0 0 0 5%;
-  border-radius: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 90%;
+    margin: 0 0 0 0%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
 }
 
 li {
-  color: rgb(255,255,242);
+  background-color: rgba(2, 21, 37);
+  color: white;
   max-width: 100%;
   font-size: 2rem;
   display: inline-block;
-  margin: 20px 0 0 5%
+  margin: 20px 0 0 2%;
+  padding: 0 3% 0 0;
 }
 
 ul {
-  padding: 0 0 0 5%;
   padding: 0 0 0 0;
 }
 
@@ -131,18 +159,17 @@ a:hover {
   transition: all 0.2s ease-in;
   text-decoration: none;
 }
-span{
-  color: rgb(255,255,242);
-}
+
 p {
-    color: rgb(255,255,242);
-    padding: 0 2% 20px 5%;
-    font-size: 2.3rem;
+  color: rgb(255, 255, 242);
+  padding: 0 0 0 5%;
+  font-size: 2.3rem;
+  margin: 30px 0 30px 0;
 }
 
 a {
   margin: 0 0 0 0;
-  color: rgb(255,255,242);
+  color: rgb(255, 255, 242);
 }
 
 .Create {
@@ -156,7 +183,7 @@ a {
 }
 
 .width {
-  color: rgb(255,255,242);
+  color: white;
   max-width: 100%;
 }
 
@@ -171,8 +198,9 @@ i {
 }
 
 .books {
-  border-radius: 10px;
-  background-color: rgba(2,21,37);
+  word-spacing: .2em;
+  border-radius: 5px;
+  color: rgba(2, 21, 37);
   margin: 20px 0 0 0;
 }
 
@@ -187,34 +215,156 @@ i {
   font-size: 3.4rem;
   margin: 0px 0 0 24%;
 }
+
 .fa-trash:before {
-    border-radius: 10px;
+  border-color: rgba(2, 21, 37);
+  border-radius: 5px;
+  content: "\f1f8";
 }
+
 .fa, .fas {
-  font-size: 2.9rem;
+  font-size: 3.4rem;
   margin: 5px 0 15px 5%;
   padding: 5px;
 }
-.posted{
+
+.posted {
   font-style: italic;
   text-decoration: inherit;
   color: red;
   margin: 0 0 0 10%;
 }
-.postStory{
+
+.postStory {
   margin: 0 0 0 10%;
 }
-.postStory+a>h3{
+
+.postStory+a>h3 {
   display: inline-block;
-  color: white;
-  border: 2px solid white;
-  border-radius: 10px;
+  border: 2px solid;
+  border-radius: 5px;
   font-size: 2rem;
-  height:40px;
-  width: 10%;
-  padding: 7px 0 0 1.33%;
+  height: 40px;
+  padding: 1%;
   margin: 0 0 0 15%;
+  color: white;
 }
-.message>p{
-  color: black;
+
+@media only screen and (max-width:2014px) {
+  .profilePic>img {
+    margin: 215px 0 0 138%;
+    border-radius: 50%;
+    width: 74%;
+    height: 306px;
+  }
 }
+
+@media only screen and (max-width:1746px) {
+  .profilePic>img {
+    margin: 215px 0 0 138%;
+    border-radius: 50%;
+    width: 74%;
+    height: 306px;
+  }
+}
+
+@media only screen and (max-width:1614px) {
+  .profilePic>img {
+    margin: 215px 0 0 138%;
+    border-radius: 50%;
+    width: 74%;
+    height: 306px;
+  }
+}
+
+@media only screen and (max-width:1428px) {
+  .profilePic>img {
+    margin: 215px 0 0 128%;
+    border-radius: 50%;
+    width: 88%;
+    height: 306px;
+  }
+
+  h3 {
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 160px 0 20px 19%;
+    max-width: 25%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width:1344px) {
+  .profilePic>img {
+    margin: 215px 0 0 125%;
+    border-radius: 50%;
+    width: 95%;
+    height: 306px;
+  }
+}
+
+@media only screen and (max-width:1211px) {
+  .profilePic>img {
+    margin: 215px 0 0 122%;
+    border-radius: 50%;
+    width: 110%;
+    height: 306px;
+  }
+
+  h3 {
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 160px 0 20px 19%;
+    max-width: 28%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1085px) {
+  .profilePic>img {
+    margin: 215px 0 0 118%;
+    border-radius: 50%;
+    width: 120%;
+    height: 306px;
+  }
+
+  @media only screen and (max-width: 950px) {
+    .profilePic>img {
+      margin: 215px 0 0 138%;
+      border-radius: 50%;
+      width: 80%;
+      height: 306px;
+    }
+    .bookShelf {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 90%;
+    margin: 0 0 0 0%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+  }
+  }
+  @media only screen and (min-width: 769px) {
+    .bookShelf {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 90%;
+    margin: 0 0 0 0%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+  }
+  }
