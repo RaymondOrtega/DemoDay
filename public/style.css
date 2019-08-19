@@ -339,6 +339,7 @@ label {
 .bodyLogIn {
   background-size: cover;
   background-image: url(/img/bluebook.jpeg);
+  background-repeat: no-repeat;
 }
 
 .signUpDir {
