@@ -7,7 +7,11 @@ body {
   font-size: 10px;
   margin: 0 0 0 0;
 }
-
+.btn-warning {
+    color: rgba(2, 21, 37);
+    background-color: white;
+    border-color: rgba(2, 21, 37);
+}
 header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -477,6 +481,12 @@ label {
 }
 
 @media only screen and (max-width: 1105px) {
+  .container {
+    margin-top: 40px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 10px;
+    max-width: 80%;
+}
   .author {
     float: left;
     margin: 75px 3% 0 20%;
@@ -658,6 +668,9 @@ label {
 }
 
 @media only screen and (max-width:697px) {
+  .form-control{
+    height: 24px;
+  }
   h2 {
     max-width: 90%;
     margin: 0px 0px 208px 3%;
@@ -709,6 +722,7 @@ label {
     margin: 6px 0 0px 0;
   }
 }
+
 @media only screen and (max-width:572px) {
   h2 {
     max-width: 90%;
@@ -751,12 +765,14 @@ label {
     font-weight: 600;
     font-size: 1.2rem;
   }
+
   .right {
-      grid-column: 2/4;
-      padding: 0 0 0 0%;
-      height: 20px;
-      text-align: center;
+    grid-column: 2/4;
+    padding: 0 0 0 0%;
+    height: 20px;
+    text-align: center;
   }
+
   .left {
     padding: 0 0 0 0;
     display: inline-block;
@@ -767,19 +783,22 @@ label {
     margin: 6px 0 0px 0;
   }
 }
+
 @media only screen and (max-width:572px) {
-.fa-book-open:before {
+  .fa-book-open:before {
     display: none;
-}
-.right {
+  }
+
+  .right {
     grid-column: 1/4;
     grid-row: 1/2;
     padding: 0 0 0 10%;
     height: 20px;
     text-align: center;
     display: inline-block;
-}
-.left {
+  }
+
+  .left {
     grid-row: 1/2;
     padding: 0 0 0 0;
     display: inline-block;
@@ -788,8 +807,9 @@ label {
     grid-template-columns: 10% 10%;
     grid-gap: 10%;
     margin: 10px 40% 0px 0;
-}
-h3 {
+  }
+
+  h3 {
     padding: 5px 0 5px 0;
     border-bottom: 2px solid black;
     border-bottom-width: thick;
@@ -800,35 +820,23 @@ h3 {
     text-align: center;
     font-weight: 300;
     font-size: 1.7rem;
-}
-}
-@media only screen and (max-width:405px) {
-  a {
-      padding: 12px 0px 0 0;
-      border-radius: 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.2rem;
   }
-  .right {
-    grid-column: 1/4;
-    grid-row: 1/2;
-    padding: 0 0 0 5%;
-    height: 20px;
-    text-align: center;
-    display: inline-block;
 }
 
-}
-@media only screen and (max-width:392px) {
+@media only screen and (max-width:405px) {
   a {
-      padding: 12px 5px 0 0;
+    padding: 12px 0px 0 0;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .container {
+      margin-top: 40px;
+      background-color: rgba(30, 30, 30, 0.7);
       border-radius: 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
+      max-width: 100%;
   }
   .right {
     grid-column: 1/4;
@@ -837,24 +845,48 @@ h3 {
     height: 20px;
     text-align: center;
     display: inline-block;
+  }
 }
-h2 {
+
+@media only screen and (max-width:392px) {
+
+  a {
+    padding: 12px 5px 0 0;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .right {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    padding: 0 0 0 5%;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  h2 {
     max-width: 74%;
     margin: 0px 0px 323px 6%;
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
     grid-column: 1/3;
-}
-h1 {
+  }
+
+  h1 {
     grid-row: 2/3;
     grid-column: 1/3;
     margin: 10px 0 0 6%;
     color: white;
     font-size: 2.5rem;
     height: 100px;
-}
-h3 {
+  }
+
+  h3 {
     padding: 5px 0 5px 0;
     border-bottom: 2px solid black;
     border-bottom-width: thick;
@@ -865,5 +897,6 @@ h3 {
     text-align: center;
     font-weight: 300;
     font-size: 1.5rem;
-}
+  }
+
 }

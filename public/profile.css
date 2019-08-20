@@ -125,12 +125,12 @@ form {
 }
 
 .bookShelf {
-    grid-auto-rows: minmax(100px, auto);
-    display: grid;
-    max-width: 90%;
-    margin: 0 0 0 3%;
-    border-radius: 5px;
-    grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  display: grid;
+  max-width: 90%;
+  margin: 0 0 0 3%;
+  border-radius: 5px;
+  grid-template-columns: 1fr;
 }
 
 li {
@@ -337,15 +337,39 @@ i {
     width: 120%;
     height: 306px;
   }
+}
 
-  @media only screen and (max-width: 950px) {
-    .profilePic>img {
-      margin: 215px 0 0 138%;
-      border-radius: 50%;
-      width: 80%;
-      height: 306px;
-    }
-    .bookShelf {
+@media only screen and (max-width: 950px) {
+  .profilePic>img {
+    margin: 220px 0 0 120%;
+    border-radius: 50%;
+    width: 115%;
+    height: 234px;
+  }
+
+  .books {
+    word-spacing: .2em;
+    border-radius: 5px;
+    color: rgba(2, 21, 37);
+    margin: 75px 0 0 0;
+  }
+
+  h3 {
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 90px 0 20px 11%;
+    max-width: 50%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
+  }
+
+  .bookShelf {
     grid-auto-rows: minmax(100px, auto);
     display: grid;
     max-width: 90%;
@@ -353,9 +377,36 @@ i {
     border-radius: 5px;
     grid-template-columns: 1fr;
   }
+}
+
+@media only screen and (max-width: 769px) {
+  .postStory {
+    margin: 0 0 0 4%;
   }
-  @media only screen and (min-width: 769px) {
-    .bookShelf {
+
+  .leftBio {
+    display: grid;
+    grid-row: 3/2;
+    grid-template-rows: 2fr 3fr 1fr 1fr;
+    float: left;
+    width: 20%;
+    background-color: rgba(2, 21, 37);
+    border-radius: 5px;
+    margin: 253px 0 0 2%;
+  }
+
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 40px;
+    padding: 1%;
+    margin: 0 0 0 8%;
+    color: white;
+  }
+
+  .bookShelf {
     grid-auto-rows: minmax(100px, auto);
     display: grid;
     max-width: 90%;
@@ -363,4 +414,291 @@ i {
     border-radius: 5px;
     grid-template-columns: 1fr;
   }
+}
+
+@media only screen and (max-width: 663px) {
+  .posted {
+    font-style: italic;
+    text-decoration: inherit;
+    color: red;
+    margin: 0 0 0 5%;
   }
+
+  .leftBio {
+    display: grid;
+    grid-row: 3/2;
+    grid-template-rows: 2fr 3fr 1fr 1fr;
+    float: left;
+    width: 30%;
+    background-color: rgba(2, 21, 37);
+    border-radius: 5px;
+    margin: 253px 0 0 2%;
+  }
+
+  .bookShelf {
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    max-width: 95%;
+    margin: 0 0 0 0%;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  .profilePic>img {
+    margin: 220px 0 0 105%;
+    border-radius: 50%;
+    width: 146%;
+    height: 234px;
+  }
+
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 40px;
+    padding: 1%;
+    margin: 0 0 0 5%;
+    color: white;
+  }
+
+  .postStory {
+    margin: 0 0 0 4%;
+  }
+
+  h3 {
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 115px 0 20px 1%;
+    max-width: 58%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
+  }
+
+  li {
+    background-color: rgba(2, 21, 37);
+    color: white;
+    max-width: 100%;
+    font-size: 2rem;
+    display: inline-block;
+    margin: -5px 0 0 2%;
+    padding: 0 3% 0 0;
+  }
+}
+
+@media only screen and (max-width: 631px) {
+  .leftBio {
+    display: grid;
+    grid-row: 3/2;
+    grid-template-rows: 2fr 3fr 1fr 1fr;
+    float: left;
+    width: 28%;
+    background-color: rgba(2, 21, 37);
+    border-radius: 5px;
+    margin: 253px 0 0 2%;
+  }
+
+  .books {
+    overflow-y: scroll;
+    height: 400px;
+  }
+
+  .fa, .fas {
+    font-size: 2.8rem;
+    margin: 5px 0 15px 5%;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 631px) {
+  .profilePic>img {
+    margin: 220px 0 0 90%;
+    border-radius: 50%;
+    width: 169%;
+    height: 234px;
+}
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 40px;
+    padding: 1%;
+    margin: 0 0 0 -1%;
+    color: white;
+  }
+
+  .postStory {
+    margin: 0 0 0 0%;
+  }
+  .posted {
+    font-style: italic;
+    text-decoration: inherit;
+    color: red;
+    margin: 0 0 0 3%;
+}
+.Create>h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 10px 0 0 10%;
+}
+}
+@media only screen and (max-width: 502px) {
+  p {
+    color: rgb(255, 255, 242);
+    padding: 0 0 0 5%;
+    font-size: 1.5rem;
+}
+  li {
+    background-color: rgba(2, 21, 37);
+    color: white;
+    max-width: 100%;
+    font-size: 2rem;
+    display: inline-block;
+    margin: -5px 0 0 2%;
+    padding: 0 3% 0 0;
+}
+  .profilePic>img {
+    margin: 220px 0 0 70%;
+    border-radius: 50%;
+    width: 196%;
+    height: 234px;
+}
+  h3 {
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 115px 0 20px 1%;
+    max-width: 75%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
+}
+}
+@media only screen and (max-width: 408px) {
+  .posted {
+    font-style: italic;
+    text-decoration: inherit;
+    color: red;
+    margin: 0 0 0 34%;
+}
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 40px;
+    padding: 1%;
+    margin: 0 0 0 5%;
+    color: white;
+}
+.postStory {
+    margin: 0 0 0 5%;
+}
+.lhThumbUp{
+  display: block;
+}
+}
+@media only screen and (max-width: 360px) {
+  li {
+    background-color: rgba(2, 21, 37);
+    color: white;
+    max-width: 100%;
+    font-size: 2rem;
+    display: inline-block;
+    margin: -5px 0px 0 3%;
+    padding: 0 3% 0 5px;
+}
+  .fa, .fas {
+    font-size: 2rem;
+    margin: 5px 0 15px 5%;
+    padding: 5px;
+}
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 20px;
+    padding: 1%;
+    margin: 0 0 0 5%;
+    color: white;
+}
+  .leftBio {
+    display: grid;
+    grid-row: 3/2;
+    grid-template-rows: 2fr 3fr 1fr 1fr;
+    float: left;
+    width: 33%;
+    background-color: rgba(2, 21, 37);
+    border-radius: 5px;
+    margin: 253px 0 0 2%;
+}
+  .profilePic>img {
+    margin: 220px 0 0 60%;
+    border-radius: 50%;
+    width: 230%;
+    height: 234px;
+}
+h3 {
+    color: black;
+    border-bottom: 2px solid black;
+    border-bottom-width: thick;
+    border-top: 2px solid black;
+    border-top-style: ridge;
+    border-color: rgba(255, 0, 0, 0.5);
+    padding: 5px 0 5px 0;
+    margin: 115px 0 20px -15%;
+    max-width: 90%;
+    grid-row: 1/2;
+    height: 50px;
+    font-size: 3rem;
+}
+p {
+    color: rgb(255, 255, 242);
+    padding: 0 0 0 2%;
+    font-size: 1.5rem;
+}
+input {
+    border-radius: 10%;
+    width: 40%;
+    height: 20px;
+    margin: 40px 0 0 5%;
+    grid-column: 2/3;
+    font-size: .5rem;
+    padding: 0 0 0 0;
+}
+.postStory {
+    width: 40%;
+    font-size: 1rem;
+    height: 15px;
+}
+.fa-trash{
+  height: 15px;
+  width: 8%;
+  font-size: 1rem;
+  padding: 0 0 0 0;
+}
+.Create>h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 10px 0 0 10%;
+}
+.posted {
+    font-style: italic;
+    text-decoration: inherit;
+    color: red;
+    margin: 0 0 0 34%;
+    font-size: 1.2rem;
+}
+}
