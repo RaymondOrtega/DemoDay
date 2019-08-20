@@ -358,7 +358,7 @@ label {
   font-size: 2rem;
 }
 
-@media only screen and (max-width:1596px) {
+@media only screen and (max-width:1396px) {
   h4 {
     margin: 100px 0 10px 0;
   }
@@ -628,34 +628,65 @@ label {
     margin: 75px 3% 0 10%;
     display: inline-block;
     border-radius: 50%;
-    height: 200px;
+    height: 115px;
     width: 30%;
     background-color: white;
     grid-column: 1/2;
     grid-row: 1/2;
   }
-
+  .author>img {
+      float: left;
+      margin: 0 0 0 0;
+      display: inline-block;
+      border-radius: 50%;
+      height: 115px;
+      width: 100%;
+      background-color: white;
+      grid-column: 1/2;
+      grid-row: 1/2;
+  }
   .author2 {
     margin: 75px 3% 0 10%;
     display: inline-block;
     border-radius: 50%;
-    height: 200px;
+    height: 115px;
     width: 30%;
     background-color: white;
     grid-column: 1/2;
     grid-row: 1/2;
   }
-
+  .author2>img {
+      float: left;
+      margin: 0 0 0 0;
+      display: inline-block;
+      border-radius: 50%;
+      height: 115px;
+      width: 100%;
+      background-color: white;
+      grid-column: 1/2;
+      grid-row: 1/2;
+  }
   .author3 {
     margin: 75px 3% 0 10%;
     display: inline-block;
     border-radius: 50%;
-    height: 200px;
+    height: 115px;
     width: 30%;
     background-color: white;
     grid-column: 1/2;
     grid-row: 1/2;
   }
+  .author3>img {
+    float: left;
+    margin: 0 0 0 0;
+    display: inline-block;
+    border-radius: 50%;
+    height: 115px;
+    width: 100%;
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
 
   h2 {
     max-width: 90%;
