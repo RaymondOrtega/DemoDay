@@ -823,13 +823,13 @@ label {
   .right {
     grid-column: 1/4;
     grid-row: 1/2;
-    padding: 0 0 0 10%;
+    padding: 0 0 0 20%;
     height: 20px;
     text-align: center;
     display: inline-block;
-  }
+}
 
-  .left {
+.left {
     grid-row: 1/2;
     padding: 0 0 0 0;
     display: inline-block;
@@ -837,8 +837,8 @@ label {
     text-align: center;
     grid-template-columns: 10% 10%;
     grid-gap: 10%;
-    margin: 10px 40% 0px 0;
-  }
+    margin: 11px 11% 0px 23%;
+}
 
   h3 {
     padding: 5px 0 5px 0;
@@ -872,10 +872,20 @@ label {
   .right {
     grid-column: 1/4;
     grid-row: 1/2;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 20%;
     height: 20px;
     text-align: center;
     display: inline-block;
+}
+  .left {
+      grid-row: 1/2;
+      padding: 0 0 0 0;
+      display: inline-block;
+      height: 20px;
+      text-align: center;
+      grid-template-columns: 10% 10%;
+      grid-gap: 10%;
+      margin: 11px 11% 0px 23%;
   }
 }
 
@@ -893,11 +903,11 @@ label {
   .right {
     grid-column: 1/4;
     grid-row: 1/2;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 20%;
     height: 20px;
     text-align: center;
     display: inline-block;
-  }
+}
 
   h2 {
     max-width: 74%;
