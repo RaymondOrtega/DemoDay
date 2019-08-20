@@ -232,7 +232,7 @@ i {
 }
 
 .postStory {
-  margin: 0 0 0 10%;
+  margin: 0 0 0 35%;
 }
 
 .postStory+a>h3 {
@@ -242,7 +242,7 @@ i {
   font-size: 2rem;
   height: 40px;
   padding: 1%;
-  margin: 0 0 0 15%;
+  margin: 0 0 0 18%;
   color: white;
 }
 
@@ -250,7 +250,7 @@ i {
   .profilePic>img {
     margin: 215px 0 0 138%;
     border-radius: 50%;
-    width: 74%;
+    width: 64%;
     height: 306px;
   }
 }
@@ -296,7 +296,11 @@ i {
     font-size: 3rem;
   }
 }
-
+@media only screen and (max-width:1380px) {
+  .postStory {
+      margin: 0 0 0 25%;
+  }
+}
 @media only screen and (max-width:1344px) {
   .profilePic>img {
     margin: 215px 0 0 125%;
@@ -334,8 +338,11 @@ i {
   .profilePic>img {
     margin: 215px 0 0 118%;
     border-radius: 50%;
-    width: 120%;
+    width: 113%;
     height: 306px;
+  }
+  .postStory {
+      margin: 0 0 0 15%;
   }
 }
 
@@ -377,6 +384,19 @@ i {
     border-radius: 5px;
     grid-template-columns: 1fr;
   }
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 40px;
+    padding: 1%;
+    margin: 0 0 0 11%;
+    color: white;
+}
+.postStory {
+    margin: 0 0 0 13%;
+}
 }
 
 @media only screen and (max-width: 769px) {
@@ -516,33 +536,33 @@ i {
   }
 }
 
-@media only screen and (max-width: 631px) {
+@media only screen and (max-width: 467px) {
   .profilePic>img {
     margin: 220px 0 0 90%;
     border-radius: 50%;
     width: 169%;
     height: 234px;
 }
-  .postStory+a>h3 {
+.postStory+a>h3 {
     display: inline-block;
     border: 2px solid;
     border-radius: 5px;
     font-size: 2rem;
     height: 40px;
     padding: 1%;
-    margin: 0 0 0 -1%;
+    margin: 0 0 0 5%;
     color: white;
-  }
+}
 
   .postStory {
-    margin: 0 0 0 0%;
-  }
-  .posted {
-    font-style: italic;
-    text-decoration: inherit;
-    color: red;
-    margin: 0 0 0 3%;
+    margin: 0 0 0 11%;
 }
+  .posted {
+      font-style: italic;
+      text-decoration: inherit;
+      color: red;
+      margin: 0 0 0 40%;
+  }
 .Create>h2 {
     font-weight: 500;
     font-size: 3rem;
@@ -607,6 +627,21 @@ i {
 }
 .lhThumbUp{
   display: block;
+}
+}
+@media only screen and (max-width: 371px) {
+  .postStory {
+    margin: 0 0 0 1%;
+}
+  .postStory+a>h3 {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 2rem;
+    height: 40px;
+    padding: 1%;
+    margin: 0 0 0 1%;
+    color: white;
 }
 }
 @media only screen and (max-width: 360px) {
