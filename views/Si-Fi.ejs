@@ -84,9 +84,7 @@
               <button type="button" name="commentSubmit"><i class="fas fa-comment-medical commentSubmit"></i></button>
               <p class="textSent"></p>
             </form>
-            <% for(var j=0; j<stories.length; j++) {%>
-            <p class="comment">comments: <%= stories[j].comments.length%></p>
-            <%}%>
+            <p class="comment">comments: <%= stories[i].comments.length%></p>
           </li>
         </section>
       </section>
@@ -94,6 +92,7 @@
       <%}%>
     </ul>
     <%}%>
+    <span class="hide username"><%=user.local.username%></span>
 
 
   </section>
