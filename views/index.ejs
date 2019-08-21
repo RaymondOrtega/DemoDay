@@ -43,13 +43,14 @@
 
       <% for(var i=0; i<stories.length; i++) {%>
       <%if(stories[i].postStory==true){%>
-      <%if(stories[i]==stories[0]){%>
+      <% var last = stories.length-1%>
+      <%if(stories[i]==stories[last]){%>
       <section class="author">
-        <img class="author" src="/<%= stories[0].profileImg%>" alt="">
+        <img class="author" src="/<%= stories[last].profileImg%>" alt="">
       </section>
-      <a href="/readStories/<%= stories[0]._id %>">
-        <h4><%= stories[i-0].title %></h4>
-        <p><%= stories[i-0].stories %></p>
+      <a href="/readStories/<%= stories[last]._id %>">
+        <h4><%= stories[last].title %></h4>
+        <p><%= stories[last].stories %></p>
         <%}%>
         <%}%>
         <%}%>
@@ -62,10 +63,10 @@
         <% var last = stories.length-1%>
         <%if(stories[i].postStory==true){%>
 
-        <section class="author2"><img class="author2" src="/<%= stories[last].profileImg%>" alt=""> </section>
-        <a href="/readStories/<%= stories[last]._id %>">
-          <h4><%= stories[last].title %></h4>
-          <p><%= stories[last].stories %></p>
+        <section class="author2"><img class="author2" src="/<%= stories[last-1].profileImg%>" alt=""> </section>
+        <a href="/readStories/<%= stories[last-1]._id %>">
+          <h4><%= stories[last-1].title %></h4>
+          <p><%= stories[last-1].stories %></p>
           <%}%>
           <%}%>
         </a>
@@ -76,10 +77,10 @@
       <% for(var j=stories.length-1; j<stories.length; j++) {%>
       <%if(stories[j].postStory==true){%>
 
-      <section class="author3"><img class="author3" src="/<%= stories[last-1].profileImg%>" alt=""> </section>
-      <a href="/readStories/<%= stories[last-1]._id %>">
-        <h4><%= stories[last-1].title %></h4>
-        <p><%= stories[last-1].stories %></p>
+      <section class="author3"><img class="author3" src="/<%= stories[last-2].profileImg%>" alt=""> </section>
+      <a href="/readStories/<%= stories[last-2]._id %>">
+        <h4><%= stories[last-2].title %></h4>
+        <p><%= stories[last-2].stories %></p>
         <a />
         <%}%>
             <%}%>
