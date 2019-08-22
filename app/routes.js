@@ -135,9 +135,9 @@ module.exports = function(app, passport, db, ObjectId, multer) {
     })
   })
   // Posting Books ============================
-  app.get('/read', function(req, res) {
+  app.get('/read', isLoggedIn, function(req, res) {
     db.collection('stories').find().toArray((err, result) => {
-      if (err) return console.log(err)
+      if (err) return console.log(err) 
       res.render('read.ejs', {
         user: req.user,
         stories: result
