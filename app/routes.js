@@ -61,10 +61,10 @@ module.exports = function(app, passport, db, ObjectId, multer) {
     })
   });
   // SEARCH BY GENRE=========================
-  app.get('/Romantic', isLoggedIn, function(req, res) {
+  app.get('/Romance', isLoggedIn, function(req, res) {
     db.collection('stories').find().toArray((err, result) => {
       if (err) return console.log(err)
-      res.render('Romantic.ejs', {
+      res.render('Romance.ejs', {
         user: req.user,
         stories: result
       })
@@ -88,10 +88,10 @@ module.exports = function(app, passport, db, ObjectId, multer) {
       })
     })
   });
-  app.get('/Si-Fi', isLoggedIn, function(req, res) {
+  app.get('/Sci-Fi', isLoggedIn, function(req, res) {
     db.collection('stories').find().toArray((err, result) => {
       if (err) return console.log(err)
-      res.render('Si-Fi.ejs', {
+      res.render('Sci-Fi.ejs', {
         user: req.user,
         stories: result
       })
@@ -137,7 +137,7 @@ module.exports = function(app, passport, db, ObjectId, multer) {
   // Posting Books ============================
   app.get('/read', isLoggedIn, function(req, res) {
     db.collection('stories').find().toArray((err, result) => {
-      if (err) return console.log(err) 
+      if (err) return console.log(err)
       res.render('read.ejs', {
         user: req.user,
         stories: result
